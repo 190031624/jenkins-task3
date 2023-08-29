@@ -5,6 +5,11 @@ pipeline{
             steps {
                 echo "Hi"
             }
+            steps{
+                script {
+                    sh "kubectl apply -f deployment.yaml"
+                }
+            }
         }
     }
 }
